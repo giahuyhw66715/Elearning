@@ -1,0 +1,124 @@
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+@import "./override-antd";
+
+.layout-sidebar {
+    position: sticky !important;
+    overflow-y: auto;
+    height: 100vh;
+    inset-inline-start: 0;
+    top: 0;
+    bottom: 0;
+    color: white;
+    padding: 32px 12px;
+    border-right: 1px solid $border;
+    z-index: 50;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .course-item {
+        padding: 12px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: background-color 0.2s;
+        &:hover {
+            background-color: rgba($color: $primary, $alpha: 0.1);
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    border-radius: 12px;
+}
+
+.course-list {
+    .course-item {
+        background-color: $dark;
+        border: 1px solid $border;
+        color: white;
+        &:hover {
+            border: 1px solid $border;
+        }
+
+        &-description {
+            color: white;
+        }
+
+        &-lecturer {
+            @include truncate();
+        }
+
+        &-department {
+            @include truncate();
+        }
+    }
+}
+
+.course-detail {
+    position: relative;
+    height: 300px;
+    img {
+        height: 100%;
+        border-radius: 12px;
+    }
+    &-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 16px 24px;
+        z-index: 20;
+    }
+}
+
+.login {
+    display: grid;
+    place-items: center;
+    column-gap: 80px;
+    grid-template-columns: 1.5fr 1fr;
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.upload-btn {
+    border: 0;
+    background: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+}
+
+.attachment {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 12px;
+    padding-right: 16px;
+    border-radius: 8px;
+    color: $primary !important;
+    border: 1px solid $border;
+    background-color: rgba($color: $primary, $alpha: 0.1) !important;
+}
+
+.assigment-item {
+    padding: 20px 16px;
+    background-color: rgba($color: $primary, $alpha: 0.1);
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 0.2s;
+    &:hover {
+        background-color: rgba($color: $primary, $alpha: 0.2);
+        transform: scale(1.01);
+    }
+}

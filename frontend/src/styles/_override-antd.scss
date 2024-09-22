@@ -1,0 +1,43 @@
+.ant-select-arrow {
+    color: white !important;
+    font-size: 10px !important;
+}
+
+.ant-select {
+    &-selector {
+        color: white !important;
+        padding: 19px 16px !important;
+    }
+    &-arrow {
+        margin-top: 0 !important;
+    }
+}
+
+.ant-upload {
+    width: 100%;
+    background-color: transparent !important;
+}
+
+.ant-modal {
+    &-close {
+        color: white !important;
+    }
+    &-header {
+        background-color: $dark !important;
+    }
+    &-content {
+        background-color: $dark !important;
+        border: 1px solid $border;
+        border-radius: 12px;
+        padding: 24px;
+        color: white;
+    }
+}
+
+.ant-form-item-explain-error {
+    margin: 8px 4px;
+}
+
+.ant-tabs-nav::before {
+    border: 0 !important;
+}
